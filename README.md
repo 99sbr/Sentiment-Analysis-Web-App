@@ -1,1 +1,1 @@
-# Sentiment-Aanalysis-WebApp
+# Sentiment-Analysis-WebApp
