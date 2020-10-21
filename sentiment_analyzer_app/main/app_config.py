@@ -1,13 +1,17 @@
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
+
 
 
 class Config:
     API_PREFIX = '/api/v1'
 
+
 class DevelopmentConfig(Config):
-    DEBUG = True
-    TESTING = True
+    BASEDIR = os.path.abspath(os.path.dirname(__file__))
+    MASTER_CONFIG_FILE = "master.yaml"
+    MODEL_IN_USE = "bert_model"
+    DEBUG = False
+    TESTING = False
 
 
 class TestingConfig(Config):

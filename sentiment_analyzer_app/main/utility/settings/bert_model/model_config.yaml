@@ -1,0 +1,2 @@
+PRE_TRAINED_MODEL_NAME: 'bert-base-cased'
+best_model_path : 'Model/best_model_state-3.bin'

@@ -5,3 +5,17 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+/Model/
+.DS_Store
+sentiment_analyzer_app/__init__.pyc
+sentiment_analyzer_app/__pycache__/
+sentiment_analyzer_app/main/__pycache__/
+sentiment_analyzer_app/main/controller/__pycache__/
+sentiment_analyzer_app/main/model/__pycache__/
+sentiment_analyzer_app/main/model/sentiment_classification/__pycache__/
+sentiment_analyzer_app/main/model/sentiment_classification/bert_model/__pycache__/
+sentiment_analyzer_app/main/services/__pycache__/
+sentiment_analyzer_app/main/utility/__pycache__/
+sentiment_analyzer_app/main/utility/manager/__pycache__/
+sentiment_analyzer_app/main/utility/payloads/__pycache__/
+wandb/

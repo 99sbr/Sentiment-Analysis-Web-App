@@ -24,7 +24,6 @@ class SentimentAnalysis(Resource):
         try:
             input_text = self.api.payload['InputText']
             sentiment = SentimentAnalyzerService(input_text=input_text).run()
-
             return {'Response': sentiment}
         except Exception as e:
             self.api.abort(500)

@@ -1,5 +1,4 @@
 import os
-
 os.environ['CONFIG'] = 'dev'
 from werkzeug.utils import cached_property
 from sentiment_analyzer_app import blueprint

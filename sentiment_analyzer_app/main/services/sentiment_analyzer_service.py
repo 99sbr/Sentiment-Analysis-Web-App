@@ -1,5 +1,8 @@
-from spacy.lang.en.stop_words import STOP_WORDS
-import re
+import os
+from sentiment_analyzer_app.main.app_config import config_by_name
+from sentiment_analyzer_app.main.model.sentiment_classification.bert_model import bert
+
+conf = config_by_name[os.environ['CONFIG']]
 
 
 class SentimentAnalyzerService(object):
@@ -7,26 +10,12 @@ class SentimentAnalyzerService(object):
     def __init__(self, input_text):
         self.input_text = input_text
 
-    def __run_text_preprocessing(self) -> str:
-        raw_text_list = self.input_text.split('\n')
-        print('removing stopwords')
-        raw_text_list = [
-            token for token in raw_text_list if token not in STOP_WORDS
-        ]
-        clean_sent_list = [
-            re.sub("[^A-Za-z0-9]./", '', token) for token in raw_text_list
-            if bool(token)
-        ]
-        clean_sent = ' '.join(clean_sent_list)
-        clean_sent = ' '.join(clean_sent.split())
-        return clean_sent
-
     def __run_prediction(self) -> str:
-        clean_sent = self.__run_text_preprocessing()
+        model = bert.Prediction()
+        sentiment = model.predict(self.input_text)
         # load model and run predict
-        return "Positive"
+        return sentiment
 
     def run(self) -> str:
         prediction = self.__run_prediction()
         return prediction
-
