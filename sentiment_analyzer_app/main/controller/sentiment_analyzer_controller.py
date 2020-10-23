@@ -1,3 +1,4 @@
+from flask import render_template
 from flask_restplus import Resource
 
 from sentiment_analyzer_app.main.services.sentiment_analyzer_service import SentimentAnalyzerService
@@ -5,6 +6,7 @@ from sentiment_analyzer_app.main.utility.payloads.sentiment_analyzer_payload imp
 
 api = SentimentAnalyzer.api
 payload = SentimentAnalyzer.payload
+
 
 
 @api.route("/get-sentiment")
@@ -24,6 +26,6 @@ class SentimentAnalysis(Resource):
         try:
             input_text = self.api.payload['InputText']
             sentiment = SentimentAnalyzerService(input_text=input_text).run()
-            return {'Response': sentiment}
+            return sentiment
         except Exception as e:
             self.api.abort(500)

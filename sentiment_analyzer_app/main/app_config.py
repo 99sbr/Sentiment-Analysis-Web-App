@@ -1,7 +1,6 @@
 import os
 
 
-
 class Config:
     API_PREFIX = '/api/v1'
 

@@ -1,13 +1,10 @@
 from flask import Flask
-from flask_bcrypt import Bcrypt
-
 from .app_config import config_by_name
-
-flask_bcrypt = Bcrypt()
+from .model.sentiment_classification.bert_model import load_model
+bert_model = load_model()
 
 
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
-    flask_bcrypt.init_app(app)
     return app

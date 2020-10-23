@@ -17,5 +17,6 @@ class SentimentAnalyzerService(object):
         return sentiment
 
     def run(self) -> str:
+        print('Running Prediction')
         prediction = self.__run_prediction()
         return prediction
