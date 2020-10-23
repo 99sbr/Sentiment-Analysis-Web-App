@@ -5,7 +5,7 @@ from sentiment_analyzer_app.main.controller.sentiment_analyzer_controller import
 blueprint = Blueprint('api', __name__)
 
 api = Api(blueprint,
-          title='Sentiment Analysis API',
+          title='Sentiment Analysis API 🤖 👨🏼‍💻',
           version='1.0',
           description='Flask restplus web service for Sentiment Analysis App'
           )

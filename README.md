@@ -1,4 +1,4 @@
-# Sentiment-Analysis-WebApp: Built Using Flask-Restplus
+# Sentiment-Analysis-WebApp 🤖 : Built Using Flask-Restplus
 
 - The Flask API structured as follow:
   ![Image](https://github.com/99sbr/Sentiment-Analysis-WebApp/blob/main/Screenshot%202020-10-23%20at%2008.37.54.png)
